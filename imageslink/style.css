@@ -2,17 +2,9 @@ body {
     background-color: rgb(210, 210, 210);
     text-align: center;
 }
-.image {
-    position: fixed;
-    top: 25%;
-    left: 25%;
-    right: 25%;
-}
 a {
-    position: absolute;
-    bottom: 50px;
-    left: 25%;
-    right: 25%;
+    position: relative;
+    top: 40px;
 }
 h1 {
     font-family: Times, 'Times New Roman', serif;

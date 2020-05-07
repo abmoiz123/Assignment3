@@ -20,9 +20,10 @@
     margin-bottom: 10px;
 }
 .s:link, .s:visited {
+    font-size: 15px;
     text-decoration: none;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
     color: rgb(247, 248, 250);
 }
 .bb {
@@ -36,18 +37,21 @@
     width: 200px;
 }
 .nav {
+    position: sticky;
+    top: 0;
     background-color: rgb(247, 248, 250);
+    z-index: 1;
+}
+.carousel {
+    z-index: -1;
 }
 .spa {
-    display: flex;
     padding-top: 6px;
     padding-bottom: 6px;
 }
-.spa2 {
-    flex: 1;
-}
 .navbo {
-    margin: 10px auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .down {
     margin-left: 4px;
@@ -56,20 +60,34 @@
     background-color: rgb(49, 109, 195);
     color: rgb(247, 248, 250);
     border-radius: 25px;
-    padding: 6px 15px;
+    padding: 6px 14px;
     text-align: center;
     font-size: 12px;
     text-decoration: none;
-    /* font-weight: 350; */
+    display: inline-block;
+}
+.dropbtn {
+    cursor: pointer;
+    color: rgb(50, 50, 50);
+    border-radius: 25px;
+    padding: 6px 14px;
+    text-align: center;
+    display: inline-block;
+}
+.dropbtn:hover {
+    color: rgb(50, 50, 50);
+    border-radius: 25px;
+    padding: 6px 14px;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
 }
 .dropbtn:link, .dropbtn:visited  {
     color: rgb(50, 50, 50);
     border-radius: 25px;
-    padding: 6px 15px;
+    padding: 6px 14px;
     text-align: center;
     text-decoration: none;
-    /* font-weight: 350; */
     display: inline-block;
 }
 .dropbtn:hover {
@@ -79,15 +97,55 @@
 .dropdown {
     color: rgb(247, 248, 250);
     display: inline-block;
-}    
+}
+.dropdown-content2:hover .dropdown-content3 {
+    display: block;
+}
+
+.dropdown5:hover .dropdown-content2 {
+    display: block;
+}
+.dropdown5:hover .dropdown-content6 {
+    display: block;
+}
 .dropdown-content {
     display: none;
     position: absolute;
     min-width: 200px;
+    max-width: 500px;
     z-index: 1;
-    /* max-height: auto; */
 }
-  
+.dropdown-content2 {
+    border-radius: 0;
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    z-index: 1;
+}
+.dropdown-content3 {
+    border-radius: 0;
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    z-index: 1;
+}
+.dropdown-content6 {
+    border-radius: 0;
+    display: none;
+    position: absolute;
+    min-width: 300px;
+    z-index: 1;
+}
+.dropdown-content p {
+    margin: 0;
+    background-color: white;
+    font-weight: bold;
+    font-size: 14px;
+    float: none;
+    color: rgb(100, 100, 100);
+    padding: 6px 9px;
+    display: block;
+}
 .dropdown-content a {
     background-color: white;
     font-weight: bold;
@@ -98,41 +156,56 @@
     text-decoration: none;
     display: block;
 }
-.dropdown-content a:hover {
+.dropdown-content a:hover, .dropdown-content p:hover {
+    cursor: pointer;
     background-color: rgb(49, 109, 195);
     color: rgb(247, 248, 250);
     text-align: center;
-} 
+}
 .dropdown:hover .dropdown-content {
     display: block;
 }
-.rig {
-    float: right;
-    margin-top: 3px;
+.text-slide {
+  width:100%;
+}
+.text-slide- p {
+  animation: slide-left 10s;
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+}
+}
+
+to {
+    margin-left: 0%;
+    width: 100%;
+}
+.slide-text-line {
+    padding-left: 8px;
+    padding-right: 8px;
+    display: inline;
 }
 .slide-text {
+    background-color: rgb(49, 109, 195);
     padding: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 .news {
     color: rgb(0, 255, 0);
-    font-size: 18px;
-    font-weight: 400;
+    font-weight: 600;
 }
 .more-detail:link, .more-detail:visited {
     text-decoration: none;
-    color: burlywood;
-    font-size: 18px;
-    font-weight: 400;
+    color: blue;
+    font-weight: 600;
 }
 .text-slide {
-    padding: 3px 0 3px 0;
-    text-align: center;
     color: rgb(247, 248, 250);
-    font-size: 18px;
-    font-weight: 400;
-    background-color: rgb(38, 85, 232);
+    font-weight: 600;
 }
 .tex {
     padding: 0;
@@ -167,7 +240,6 @@
 .saylaniicon {
     display: inline-block;
     width: 45px;
-    /* margin-bottom: 20px; */
 }
 #medical {
     text-align: center;
@@ -260,6 +332,9 @@
     width: 50px;
     border: 1px solid rgb(66, 121, 0);
 }
+.script-scroll {
+    padding-right: 90px;
+}
 .mission {
     /* padding: 0; */
     margin: 0;
@@ -293,9 +368,10 @@
     font-size: 18px;   
 }
 .upcoming-script {
-    text-align: justify;
+    /* text-align: justify; */
     color: grey;
-    margin: 10px 0 10px 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .upcoming-script2:link, .upcoming-script2:visited {
     text-decoration: none;
